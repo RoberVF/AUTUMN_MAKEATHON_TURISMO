@@ -8,10 +8,10 @@ tokenizer= GPT2Tokenizer.from_pretrained("datificate/gpt2-small-spanish")
 tokenizer.pad_token= tokenizer.eos_token
 
 # Entrada de texto
-input_text= "Cuéntame sobre los servicios que ofrece este hotel."
+input_text= input("Pregunta: ")
 
 # Parametros
-max_size = 100
+max_size = 160
 size_to_start_to_finish= 70
 
 # Generamos el texto
@@ -43,4 +43,4 @@ for i, word in enumerate(words):
 
 final_text = " ".join(final_text)
 
-print(final_text)
+print(f"\nRespuesta: {final_text}")
