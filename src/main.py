@@ -1,8 +1,8 @@
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
 # Cargamos el modelo
-model= GPT2LMHeadModel.from_pretrained("datificate/gpt2-small-spanish")
-tokenizer= GPT2Tokenizer.from_pretrained("datificate/gpt2-small-spanish")
+model= GPT2LMHeadModel.from_pretrained("./fine_tuning/fine_tuned_model")
+tokenizer= GPT2Tokenizer.from_pretrained("./fine_tuning/fine_tuned_model")
 
 # DistilGPT-2 no tiene un pad_token por defecto, a si que usaremos el de eos_token
 tokenizer.pad_token= tokenizer.eos_token
